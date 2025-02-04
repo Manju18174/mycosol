@@ -1,0 +1,17 @@
+.home-div{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    .img-div{
+        margin-left: 80px;
+        margin-top: -40px;
+    }
+    .caption{
+        font-size: 2rem;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 10px;
+    }
+}
