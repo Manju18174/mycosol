@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Poppins",sans-serif;
+  user-select: none;
+}
+button{
+  border: none;
+  background-color: black;
+  color: ghostwhite;
+  font-family: inherit;
+  border-radius: 20px;
+  cursor: pointer;
+}
