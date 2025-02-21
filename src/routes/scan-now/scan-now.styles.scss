@@ -1,0 +1,63 @@
+@use '../../mixins';
+
+.scan-now-div{
+    border: 1px solid;
+    padding: 20px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: center;
+    .input{
+        @include mixins.flex-down();
+        gap: 50px;
+        align-items: center;
+        
+        label{
+            // border: 3.5px dashed rgb(34, 113, 222) ;
+            border: 3.5px dashed rgb(81, 81, 81) ;
+            padding: 10px;
+            @include mixins.flex-cc();
+            flex-direction: column;
+            margin: 0 auto;
+            width: 70%;
+            gap: 20px;
+            cursor: pointer;
+            img{
+                width: 50%;
+            }
+            p{
+                font-size: 1.3rem;
+            }
+        }
+        input[type='file']{
+            display: none;
+        }
+        button{
+            width: 30%;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            // padding: 2px 50px;
+            @include mixins.flex-cc();
+            &:disabled{
+                background-color: gray
+            }
+        }
+    }
+    .results{
+        @include mixins.flex-down();
+        align-items: center;
+        gap: 20px;
+        .main{
+            width: 100%;
+            .empty{
+                @include mixins.flex-cc();
+                img{
+                    width: 50%;
+                }
+            }
+            .data{
+                @include mixins.flex-cc();
+            }
+        }
+    }
+}

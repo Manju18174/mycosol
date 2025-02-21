@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import Navbar from "./components/navbar/navbar.component"
 import '@fontsource/poppins'
 import Home from "./routes/home/home.component"
-import AboutUs from "./routes/about-us/about-us.component"
+import ScanNow from "./routes/scan-now/scan-now.component"
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar/>}>
           <Route index element={<Home/>} />
-          <Route path="about-us" element={<AboutUs/>} />
+          <Route path="scan-now" element={<ScanNow/>} />
         </Route>
       </Routes>
     </div>

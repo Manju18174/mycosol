@@ -1,17 +1,31 @@
 .home-div{
-    height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    // border: 1px solid;
     .img-div{
         margin-left: 80px;
-        margin-top: -40px;
+        margin-top: 20px;
     }
     .caption{
         font-size: 2rem;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin-top: 10px;
+        position: relative;
+        // animation: vSlideDownSlow 1s ease-out;
+        // animation-fill-mode: forwards;
+    }
+}
+@keyframes vSlideDownSlow{
+    from{
+        top: -30px;
+        opacity: 0;
+    }
+    to{
+        top: 0px;
+        opacity: 1;
     }
 }
