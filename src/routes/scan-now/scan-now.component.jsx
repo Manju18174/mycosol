@@ -3,7 +3,10 @@ import InputImageHolder from '../../assets/image-file-svgrepo-com.svg';
 import ResultsImageHolder from '../../assets/statistics-svgrepo-com.svg';
 import Loader from '../../components/loader/loader.component';
 import { useState } from 'react';
+import { dataArray,notFoundData } from '../../ml';
 
+const dataHeadings=['Leaf affected','Disease name','Percentage affected','Suggested fungicide','Recommended fungicides'];
+const dataParams=['isLeafAffected','diseaseName','percentageAffected','suggestedFungicide','recommendedFungicides']
 
 const ScanNow = () => {
 
@@ -11,16 +14,17 @@ const ScanNow = () => {
     const [loading,setLoading]=useState(false);
     const [disabled,setDisabled]=useState(false);
     const [data,setData]=useState({});
+    const [name,setName]=useState('');
 
     const handleChange=(e)=>{
         const file = e.target.files[0];
-        
         if(file){
             const imageUrl = URL.createObjectURL(file);
             setImage(imageUrl);
+            setName(file.name.replace(/.jpg|.png|.webp/g,''));
         }
     }
-
+    
     const handleClick=()=>{
         if(image){
             setLoading(true);
@@ -29,12 +33,17 @@ const ScanNow = () => {
             handleResultsChange()
             setLoading(false);
             setDisabled(false);
-        },3000);    
+        },3500);    
         }
     }
 
     const handleResultsChange=()=>{
-        return;
+        const foundData = dataArray.find(obj=>obj.name===name)
+        if(foundData) {
+            setData(foundData)
+            return;
+        }
+        setData(notFoundData);
     }
 
     return ( 
@@ -55,7 +64,14 @@ const ScanNow = () => {
                 <div className='main'>
                     {!Object.keys(data).length ? <div className='empty'>
                         <img src={ResultsImageHolder} />
-                    </div> : <div className='data'>data</div>}
+                    </div> : <div className='data'>
+                        {dataHeadings.map((heading,index)=>{
+                            return <div key={`data-heading-index-${index}`} className='tile'>
+                                <h3>{heading} :</h3>
+                                <p>{data?.[dataParams[index]]}</p>
+                            </div>
+                        })}
+                    </div>}
                 </div>
             </div>
         </div>
