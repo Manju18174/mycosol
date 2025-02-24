@@ -1,0 +1,40 @@
+.about-us-div{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: 50px 10px 10px 80px;
+    align-items: center;
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        p{
+            text-align: justify;
+        }
+        .team{
+            display: flex;
+            flex-direction: column;
+            div{
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .members{
+
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+            }
+            }
+        }
+    }
+    .block-image{
+        .img{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
