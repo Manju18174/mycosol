@@ -1,6 +1,6 @@
 export const dataArray=[
     {
-        name:'Powdery-Mildew',
+        name:'1',
         isLeafAffected:'true',
         diseaseName:'Powdery Mildew',
         percentageAffected:'86.72',
@@ -8,7 +8,7 @@ export const dataArray=[
         recommendedFungicides:'Neem oil, Myclobutanil, or Trifloxystrobin'
     },
     {
-        name:'Downy_Mildew',
+        name:'2',
         isLeafAffected:'true',
         diseaseName:'Downy Mildew',
         percentageAffected:'29.25',
@@ -16,7 +16,7 @@ export const dataArray=[
         recommendedFungicides:'Mancozeb, or Fosetyl-Al'
     },
     {
-        name:'Leaf_spot',
+        name:'3',
         isLeafAffected:'true',
         diseaseName:'Leaf Spot',
         percentageAffected:'57.33',
@@ -24,7 +24,7 @@ export const dataArray=[
         recommendedFungicides:'Chlorothalonil, Copper oxychloride, or Propiconazole'
     },
     {
-        name:'Rust',
+        name:'4',
         isLeafAffected:'true',
         diseaseName:'Rust',
         percentageAffected:'61.17',
@@ -32,7 +32,7 @@ export const dataArray=[
         recommendedFungicides:'Mancozeb, Propiconazole, or Myclobutanil'
     },
     {
-        name:'Anthracnose',
+        name:'5',
         isLeafAffected:'true',
         diseaseName:' Anthracnose',
         percentageAffected:'46.63',
@@ -40,7 +40,7 @@ export const dataArray=[
         recommendedFungicides:'Azoxystrobin, or Carbendazim'
     },
     {
-        name:'Black_spot',
+        name:'6',
         isLeafAffected:'true',
         diseaseName:'Black Spot',
         percentageAffected:'31.06',
@@ -48,7 +48,7 @@ export const dataArray=[
         recommendedFungicides:'Chlorothalonil, or Myclobutanil'
     },
     {
-        name:'botrytis-blight',
+        name:'7',
         isLeafAffected:'true',
         diseaseName:'Botrytis Blight',
         percentageAffected:'42.73',
@@ -56,7 +56,7 @@ export const dataArray=[
         recommendedFungicides:'Iprodione, Thiophanate-methyl, or Boscalid'
     },
     {
-        name:'no-disease-1',
+        name:'8',
         isLeafAffected:'false',
         diseaseName:'none',
         percentageAffected:'none',
@@ -64,7 +64,7 @@ export const dataArray=[
         recommendedFungicides:'none'
     },
     {
-        name:'no-disease-2',
+        name:'9',
         isLeafAffected:'false',
         diseaseName:'none',
         percentageAffected:'none',
@@ -72,7 +72,7 @@ export const dataArray=[
         recommendedFungicides:'none'
     },
     {
-        name:'no-disease-3',
+        name:'10',
         isLeafAffected:'false',
         diseaseName:'none',
         percentageAffected:'none',
