@@ -1,3 +1,6 @@
+import synaptic from 'synaptic';
+
+
 export const dataArray=[
     {
         name:'Powdery-Mildew',
