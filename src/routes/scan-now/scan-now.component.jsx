@@ -3,7 +3,7 @@ import InputImageHolder from '../../assets/image-file-svgrepo-com.svg';
 import ResultsImageHolder from '../../assets/statistics-svgrepo-com.svg';
 import Loader from '../../components/loader/loader.component';
 import { useState } from 'react';
-import { dataArray,notFoundData } from '../../ml';
+import { dataArray,notFoundData,detectLeafDisease } from '../../ml';
 
 const dataHeadings=['Leaf affected','Disease name','Percentage affected','Suggested fungicide','Recommended fungicides'];
 const dataParams=['isLeafAffected','diseaseName','percentageAffected','suggestedFungicide','recommendedFungicides']
@@ -18,6 +18,7 @@ const ScanNow = () => {
 
     const handleChange=(e)=>{
         const file = e.target.files[0];
+        detectLeafDisease(URL.createObjectURL(file));
         if(file){
             const imageUrl = URL.createObjectURL(file);
             setImage(imageUrl);
