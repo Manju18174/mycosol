@@ -1,3 +1,6 @@
+import synaptic from 'synaptic';
+import { pixelFormatting,normalizePixels,AugumentImage,noiseRemoval,segmentImage,extractFeatures,modelTraining,predictor } from './helpers';
+
 export const dataArray=[
     {
         name:'1',
@@ -87,4 +90,16 @@ export const notFoundData={
         percentageAffected:'not found',
         suggestedFungicide:'not found',
         recommendedFungicides:'not found'
+}
+export const detectLeafDisease = (img) => {
+    console.log('Received image: ', img);
+    const resizedImage = pixelFormatting(img, '224'); 
+    const normalizedPixelImage = normalizePixels(resizedImage); 
+    const augmentedImage = AugumentImage(normalizedPixelImage); 
+    const noiseFreeImage = noiseRemoval(augmentedImage); 
+    const segmentedLeaf = segmentImage(noiseFreeImage);  
+    const extractedFeatures = extractFeatures(segmentedLeaf);
+    const trainedModel = modelTraining(extractedFeatures);
+    const prediction = predictor(trainedModel);
+    console.log('Final Prediction:', prediction);
 }
