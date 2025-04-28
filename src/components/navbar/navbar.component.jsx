@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
 
     const [page,setPage]=useState('Home');
-    const pageIdentifiers=['Home','About Us','Scan Now'];
-    const pageNavigators = ['/','/#about-us-div','scan-now']
+    const pageIdentifiers=['Home','About Us','Scan Now','Plans'];
+    const pageNavigators = ['/','/#about-us-div','scan-now','plans']
     const navigateRouter = useNavigate();
 
     const handleNavigation=(name,path)=>{

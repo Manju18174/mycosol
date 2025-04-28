@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/navbar.component"
 import '@fontsource/poppins'
 import Home from "./routes/home/home.component"
 import ScanNow from "./routes/scan-now/scan-now.component"
+import Plans from "./routes/plans/plans.component"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Navbar/>}>
           <Route index element={<Home/>} />
           <Route path="scan-now" element={<ScanNow/>} />
+          <Route path="plans" element={<Plans/>} />
         </Route>
       </Routes>
     </div>
